@@ -1,0 +1,111 @@
+#quote-me-title-italic {
+    font-style: italic;
+    font-size: 20px;
+    color: white;
+}
+
+.topnav {
+    margin: 2%;
+    font-size: 17px;
+}
+
+.body {
+    background-color: black;
+    color: white;
+}
+
+
+.mybtn {
+    background-color: azure;
+    top: 50%;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+}
+.wrapper {
+    text-align: center;
+    margin: 3%;
+}
+.mainImg { 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+}
+    
+      
+.quote {
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+.ui.search {
+    margin-left: 45%;
+margin-bottom: 30px;
+
+}
+
+.title {
+    font-family: monospace 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.text-center{
+    margin: 0;
+    
+}
+
+nav {
+    text-align: center;
+    font-size: 24px;
+}
+
+#about-us {
+    text-align: center;
+    margin: 3%;
+    font-size: 17px;
+}
+
+
+footer{
+    margin-top: auto;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+.prompt{
+    align-items: center;
+    text-align: center;
+}
+/* Three image containers */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+  }
+
+  footer {
+      text-align: center;
+      background-color: white;
+      color: black;
+  }
