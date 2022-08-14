@@ -1,3 +1,9 @@
+// jacks code
+const form = document.querySelector("#searchForm");
+const container = document.querySelector("#container");
+const searchResult = document.querySelector("#searchResult");
+
+// lauras code
 var searchBtn = document.getElementById("search-btn");
 var output = document.querySelector(".quote");
 const quoteSearch = "https://breakingbadapi.com/api/quotes";
@@ -16,3 +22,58 @@ function getQuote(event) {
 }
 
 searchBtn.addEventListener("click", getQuote);
+
+// jacks code
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  container.innerText = "";
+  searchResult.innerText = "";
+  const searchTerm = form.elements.query.value;
+  const config = { params: { q: searchTerm } };
+  const res = await axios.get(`https://api.tvmaze.com/search/shows`, config);
+  showInfo(res.data);
+  form.elements.query.value = "";
+
+  if (res.data.length >= 1) {
+    p = `Results for: '${searchTerm}'`;
+    searchResult.append(p);
+  } else if (!searchTerm) {
+    p = "Invalid input";
+    searchResult.append(p);
+  } else {
+    p = `No results found for: '${searchTerm}'`;
+    searchResult.append(p);
+  }
+});
+
+const showInfo = async (shows) => {
+  const searchTerm = form.elements.query.value;
+  const config = { params: { q: searchTerm } };
+  const res = await axios.get(`https://api.tvmaze.com/search/shows`, config);
+
+  for (let i = 0; i < shows.length; i++) {
+    const cardMain = document.createElement("div");
+    const cardBody = document.createElement("div");
+    const titleName = document.createElement("h5");
+    const summary = document.createElement("p");
+    const image = document.createElement("img");
+    const cardGridCol = document.createElement("div");
+
+    try {
+      image.src = await res.data[i].show.image.medium;
+    } catch {
+      image.src = "image.png";
+    }
+
+    titleName.innerText = await res.data[i].show.name;
+    cardBody.append(titleName);
+
+    summary.classList.add("summary");
+    summary.innerHTML = await res.data[i].show.summary;
+    cardBody.append(summary);
+    cardMain.append(image);
+    cardMain.append(cardBody);
+    cardGridCol.append(cardMain);
+    container.append(cardGridCol);
+  }
+};

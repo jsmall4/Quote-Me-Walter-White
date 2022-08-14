@@ -37,15 +37,6 @@
       <div input="text" class="quote"></div>
     </div>
 
-    <div class="text-center">
-      <div class="ui search">
-        <div class="ui icon input">
-          <input class="prompt" type="text" placeholder="Search a character" />
-          <i class="search icon"></i>
-        </div>
-        <div class="results"></div>
-      </div>
-    </div>
     <div class="row">
       <div class="column">
         <img
@@ -85,6 +76,30 @@
       </div>
     </div>
     <div id="about-us">
+      <nav><strong>Search for more</strong></nav>
+      <span id="about"> Plot summary</span>
+    </div>
+
+    <!-- jacks code -->
+    <div id="main">
+      <h1 class="text-center">TV Show search</h1>
+      <form id="searchForm">
+        <div id="input">
+          <input
+            id="input"
+            type="text"
+            placeholder="Type Breaking Bad here to find out more"
+            name="query"
+          />
+          <button id="series-search">search</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="searchResult"></div>
+    <div id="container"></div>
+    <!-- ------------------------------------------------- -->
+    <div id="about-us">
       <nav><strong>About us</strong></nav>
       <span id="about">
         We are students of Trilogy Education.<br />
@@ -107,32 +122,3 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
   </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <button id="search-btn">Search</button>
-    <div class="quote" type="text">quote here</div>
-    <script src=".script.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-
-    <footer></footer>
-  </body>
-</html> -->
