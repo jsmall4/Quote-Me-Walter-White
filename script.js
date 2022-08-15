@@ -1,4 +1,3 @@
-
 var searchBtn = document.getElementById("search-btn");
 var output = document.querySelector(".quote");
 const quoteSearch = "https://breakingbadapi.com/api/quotes";
@@ -17,8 +16,6 @@ function getQuote(event) {
 }
 
 searchBtn.addEventListener("click", getQuote);
-
-
 
 const form = document.querySelector("#searchForm");
 const container = document.querySelector("#container");
@@ -69,6 +66,9 @@ const showInfo = async (shows) => {
     cardBody.append(titleName);
 
     summary.classList.add("summary");
+    cardMain.classList.add("centre-element");
+    titleName.classList.add("h5");
+    searchResult.classList.add("search-result");
     summary.innerHTML = await res.data[i].show.summary;
     cardBody.append(summary);
     cardMain.append(image);
