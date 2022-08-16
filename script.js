@@ -1,4 +1,4 @@
-
+var inputEl = document.getElementById("input-search").value;
 var searchBtn = document.getElementById("search-btn");
 var output = document.querySelector(".quote");
 const quoteSearch = "https://breakingbadapi.com/api/quotes";
@@ -24,6 +24,9 @@ const form = document.querySelector("#searchForm");
 const container = document.querySelector("#container");
 const searchResult = document.querySelector("#searchResult");
 
+const inputAPIString = localStorage.getItem('searchAPI');
+const inputAPI = JSON.parse(inputAPIString) || [];
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   container.innerText = "";
@@ -34,6 +37,10 @@ form.addEventListener("submit", async (e) => {
   showInfo(res.data);
   form.elements.query.value = "";
 
+  const oldInputAPI = JSON.parse(localStorage.getItem('searchAPI')) || [];
+  const newAPISearch = [...oldInputAPI, searchTerm]
+
+  localStorage.setItem('searchAPI', JSON.stringify(newAPISearch));
   if (res.data.length >= 1) {
     p = `Results for: '${searchTerm}'`;
     searchResult.append(p);
@@ -43,7 +50,10 @@ form.addEventListener("submit", async (e) => {
   } else {
     p = `No results found for: '${searchTerm}'`;
     searchResult.append(p);
+ 
   }
+  
+
 });
 
 const showInfo = async (shows) => {
@@ -77,3 +87,6 @@ const showInfo = async (shows) => {
     container.append(cardGridCol);
   }
 };
+
+
+  
