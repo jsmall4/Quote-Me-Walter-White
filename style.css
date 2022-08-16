@@ -189,4 +189,32 @@ border-radius: 20px;
 }
 
 
+.TVSearchContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.text-center {
+  padding-right: 5px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 5em;
+}
+
+.centre-element {
+  display: flex;
+  justify-content: center;
+  margin: 5em;
+}
+
+.h5,
+.search-result {
+  margin: 5em;
+}

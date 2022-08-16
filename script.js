@@ -66,6 +66,9 @@ const showInfo = async (shows) => {
     cardBody.append(titleName);
 
     summary.classList.add("summary");
+    cardMain.classList.add("centre-element");
+    titleName.classList.add("h5");
+    searchResult.classList.add("search-result");
     summary.innerHTML = await res.data[i].show.summary;
     cardBody.append(summary);
     cardMain.append(image);
