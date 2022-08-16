@@ -1,4 +1,3 @@
-
 var searchBtn = document.getElementById("search-btn");
 var output = document.querySelector(".quote");
 const quoteSearch = "https://breakingbadapi.com/api/quotes";
@@ -17,8 +16,6 @@ function getQuote(event) {
 }
 
 searchBtn.addEventListener("click", getQuote);
-
-
 
 const form = document.querySelector("#searchForm");
 const container = document.querySelector("#container");
@@ -77,3 +74,30 @@ const showInfo = async (shows) => {
     container.append(cardGridCol);
   }
 };
+
+//Laura's modal.
+
+//variables
+
+var theModalBox = document.getElementsByClassName("modal-container");
+
+var subscribeBtn = document.getElementById("open-modal-btn");
+
+var closeModalBtn = document.getElementById("close-button");
+
+//open modal
+
+//listen for open click
+
+subscribeBtn.addEventListener("click", getModal);
+//listen for close click:
+
+closeModalBtn.addEventListener("click", closeModal);
+
+function getModal() {
+  theModalBox[0].style.display = "block";
+}
+
+function closeModal() {
+  theModalBox[0].style.display = "none";
+}
