@@ -1,7 +1,6 @@
-<<<<<<< HEAD
+
 var inputEl = document.getElementById("input-search").value;
-=======
->>>>>>> main
+
 var searchBtn = document.getElementById("search-btn");
 var output = document.querySelector(".quote");
 const quoteSearch = "https://breakingbadapi.com/api/quotes";
@@ -92,10 +91,10 @@ const showInfo = async (shows) => {
   }
 };
 
-<<<<<<< HEAD
+
 
   
-=======
+
 //Laura's modal.
 
 //variables
@@ -122,4 +121,4 @@ function getModal() {
 function closeModal() {
   theModalBox[0].style.display = "none";
 }
->>>>>>> main
+
