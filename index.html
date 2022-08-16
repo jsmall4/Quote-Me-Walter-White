@@ -80,12 +80,17 @@
       <span id="about"> Plot summary</span>
     </div>
 
-    <div id="main">
+    <div class="TVSearchContainer" id="main">
       <h1 class="text-center">TV Show search</h1>
       <form id="searchForm">
         <div id="input">
           <input
+<<<<<<< HEAD
             id="input-search"
+=======
+            class="input-search"
+            id="input"
+>>>>>>> main
             type="text"
             placeholder="Type Breaking Bad here to find out more"
             name="query"
@@ -95,8 +100,8 @@
       </form>
     </div>
 
-    <div id="searchResult"></div>
-    <div id="container"></div>
+    <div class="results" id="searchResult"></div>
+    <div class="searchResult" id="container"></div>
 
     <div id="about-us">
       <nav><strong>About us</strong></nav>
@@ -105,6 +110,19 @@
         We aim to bring you the best quotes and character information on one
         useful page.</span
       >
+    </div>
+    <div class="second-wrapper">
+      <button id="open-modal-btn">Subscribe</button>
+      <div class="modal-container" id="id-modal-container">
+        <div class="my-modal">
+          <h2 id="modal-title">Join us!</h2>
+          <p id="modal-text">
+            To subscribe for more updates and series recommendations,<br />
+            email us at <strong>blue123@blue.com</strong>
+          </p>
+          <button id="close-button">Close</button>
+        </div>
+      </div>
     </div>
     <footer>
       <strong>Website: </strong> Quote Me Walter White@2022 <br />
