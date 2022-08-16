@@ -22,6 +22,12 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   border-radius: 20px;
 }
+
+.mybtn:hover {
+  background-color: white; /* Green */
+  background-color: rgb(96, 183, 240);
+}
+
 .wrapper {
   text-align: center;
   margin: 3%;
@@ -37,6 +43,8 @@
   margin-top: 50px;
   font-size: 25px;
 }
+
+
 
 .ui.search {
   margin-left: 45%;
@@ -106,6 +114,80 @@ footer {
   background-color: white;
   color: black;
 }
+
+/* Laura's modal */
+
+.modal-container {
+  display: none;
+  position: fixed;
+  align-items:center;
+  justify-content: center;
+  text-align: center;
+  position: ;
+  left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+background-color: white;
+color: white;
+border-radius: 20px;
+}
+
+#modal-title {
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#modal-text {
+
+  text-align: center;
+  font-family: serif;
+  border-radius: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#open-modal-button {
+  background-color: rgba(205, 205, 205, 0.112);
+  border-radius: 30px;
+  padding: 8px 25px;
+  font-size: 20px;
+  font-family: serif;
+  justify-content: center;
+}
+
+#close-button {
+  background-color: rgba(205, 205, 205, 0.112);
+  border-radius: 30px;
+  padding: 8px 25px;
+  font-size: 15px;
+  cursor: grab;
+  margin: 10px;
+  transition-duration: 0.4s;
+  
+}
+
+
+#close-button:hover {
+  background-color: white; /* Green */
+  background-color: rgb(96, 183, 240);
+}
+
+.my-modal {
+  margin: auto;
+  padding: 10px;
+  border: 3px solid;
+background-color: white;
+color: black;
+border-radius: 20px;
+
+}
+
+.second-wrapper {
+  text-align: center;
+  margin: 3%;
+}
+
 
 .TVSearchContainer {
   display: flex;
